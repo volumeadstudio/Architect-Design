@@ -101,24 +101,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ===== Form Submission =====
     const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // if(contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
             
-            // Simple form validation
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const messageInput = document.getElementById('message');
+    //         // Simple form validation
+    //         const nameInput = document.getElementById('name');
+    //         const emailInput = document.getElementById('email');
+    //         const messageInput = document.getElementById('message');
             
-            if(!nameInput.value || !emailInput.value || !messageInput.value) {
-                alert('Please fill in all required fields');
-                return;
-            }
+    //         if(!nameInput.value || !emailInput.value || !messageInput.value) {
+    //             alert('Please fill in all required fields');
+    //             return;
+    //         }
             
-            // Here you would typically send the form data to a server
-            // For now, we'll just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+    //         // Here you would typically send the form data to a server
+    //         // For now, we'll just show a success message
+    //         alert('Thank you for your message! We will get back to you soon.');
+    //         contactForm.reset();
+    //     });
+    // }
+
+
 });
