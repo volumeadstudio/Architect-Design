@@ -952,7 +952,7 @@ section {
 
 @media (max-width: 768px) {
     .marketing-banner {
-        top: 80px;
+        top: 50px;
     }
     
     .menu-toggle {
