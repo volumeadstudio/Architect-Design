@@ -2,24 +2,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== Mobile Menu Toggle =====
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav__links');
-    const menuIcon = menuToggle?.querySelector('i');
-    
-    if(menuToggle && navLinks && menuIcon){
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuIcon.classList.toggle('fa-bars');
-            menuIcon.classList.toggle('fa-times');
+    const navItems = document.querySelectorAll('.nav__links a');
+
+    // Toggle menu on button click
+    menuToggle.addEventListener('click', () => {
+        const isActive = navLinks.classList.contains('active');
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', !isActive);
+
+        // Handle outside clicks when menu is open
+        if (!isActive) {
+            document.addEventListener('click', closeMenuOnOutsideClick);
+        } else {
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    });
+
+    // Close menu when a nav link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
         });
-        
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuIcon.classList.add('fa-bars');
-                menuIcon.classList.remove('fa-times');
-            });
-        });
+    });
+
+    // Close menu on outside click
+    function closeMenuOnOutsideClick(e) {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
     }
+
+    // Close menu on window resize to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    });
     
     // ===== Home Background Slider =====
     const homeSlides = document.querySelectorAll('.home-slide');
@@ -101,24 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ===== Form Submission =====
     const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // if(contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
             
-            // Simple form validation
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const messageInput = document.getElementById('message');
+    //         // Simple form validation
+    //         const nameInput = document.getElementById('name');
+    //         const emailInput = document.getElementById('email');
+    //         const messageInput = document.getElementById('message');
             
-            if(!nameInput.value || !emailInput.value || !messageInput.value) {
-                alert('Please fill in all required fields');
-                return;
-            }
+    //         if(!nameInput.value || !emailInput.value || !messageInput.value) {
+    //             alert('Please fill in all required fields');
+    //             return;
+    //         }
             
-            // Here you would typically send the form data to a server
-            // For now, we'll just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+    //         // Here you would typically send the form data to a server
+    //         // For now, we'll just show a success message
+    //         alert('Thank you for your message! We will get back to you soon.');
+    //         contactForm.reset();
+    //     });
+    // }
+
+
 });

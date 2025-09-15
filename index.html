@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing Architects | Professional Architecture Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Volume Architects | Professional Architecture Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,11 +14,12 @@
     <header class="header">
         <div class="navbar">
             <a href="/" class="header__logo">
+                <!--<div class="logo__image">VA</div> -->
                 <img src="Images/14V.png" alt="Logo Description" class="custom_logo">			
-                <span class="logo__text">testing Architects</span>
+                <span class="logo__text">Volume Architects</span>
             </a>
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
             </button>
             <ul class="nav__links">
                 <li><a href="#home">HOME</a></li>
@@ -26,14 +27,21 @@
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#StartUpForm">STARTUP FORM</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
-
-    <!-- Home Section -->
-    <section class="home" id="home">
+        <!-- Marketing Banner -->
+    <div class="marketing-banner">
+        <div class="marketing-text">
+            <i class="fas fa-gift"></i>  Hurry!!! Check from time to time in order to see the latest offers.
+        </div>
+    </div>
+    
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home" id="home">
         <div class="home-slides">
             <div class="home-slide active" style="background-image: url('https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
             <div class="home-slide" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80');"></div>
@@ -43,7 +51,7 @@
             <div class="home-text-content">
                 <h1 class="home-headline">We amplify your ideas.</h1>
                 <p class="home-subtext">
-                    testing Architecture and Design Studio is a team of licensed architects providing detailed architectural and design services, including planning, consultation, research and development, BIM, 3D modeling, and visualization. Supported by our tech professionals and AI-powered solutions, we provide innovative, tailored results for clients both locally and internationally.
+                    Volume Architecture and Design Studio is a team of licensed architects providing detailed architectural and design services, including planning, consultation, research and development, BIM, 3D modeling, and visualization. Supported by our tech professionals and AI-powered solutions, we provide innovative, tailored results for clients both locally and internationally.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View Our Projects</a>
@@ -51,10 +59,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+        <!-- About Section -->
+        <section class="about" id="about">
         <div class="container">
             <div class="section-header">
                 <h2>About Our Firm</h2>
@@ -66,7 +74,7 @@
                 </div>
                 <div class="about-text">
                     <h3>Creating Spaces That Inspire</h3>
-                    <p>testing Architects with a portfolio spanning residential, commercial, and public projects across the Philippines</p>
+                    <p>Volume Architects with a portfolio spanning residential, commercial, and public projects across the Philippines</p>
                     <p>Our philosophy centers on creating spaces that harmonize with their environment while meeting the functional and aesthetic needs of our clients. We believe that great architecture emerges from a collaborative process between architect and client.</p>
                     <p>Our team of architects, designers, and technical specialists brings diverse expertise to every project, ensuring innovative solutions grounded in technical excellence.</p>
                     <div class="stats">
@@ -86,10 +94,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+        <!-- Services Section -->
+        <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <h2>Our Services</h2>
@@ -137,10 +145,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
         <div class="container">
             <div class="section-header">
                 <h2>Featured Projects</h2>
@@ -189,10 +197,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
                 <h2>Project Gallery</h2>
@@ -241,16 +249,16 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+        <!-- Contact Section -->
+        <section class="contact" id="StartUpForm">
         <div class="container">
             <div class="contact-content">
                 <h2>Start Your Project With Us</h2>
                 <p>Have a project in mind? Contact us today to discuss how we can bring your vision to life.</p>
 
-                <form class="contact-form" id="contactForm">
+                <!-- <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -268,19 +276,38 @@
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form> -->
+                <!-- ...existing code... -->
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqalvkgg" method="POST">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+               
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+       
+    </main>
+     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
                     <a href="/" class="footer-logo">
                         <img src="Images/14V.png" alt="Logo Description" class="custom_logo">	
-                        testing Architects
+                        Volume Architects
                     </a>
                     <p>Transforming architectural visions into reality through innovative design, technical excellence, and cutting-edge technology solutions.</p>
                 </div>
@@ -299,38 +326,38 @@
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Quezon, Quezon</li>
                         <li><i class="fas fa-phone"></i> 0945 186 2279</li>
-                        <li><i class="fas fa-envelope"></i> testing.adstudio@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> Volume.adstudio@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- Footer Bottom -->
-    <div class="footer-bottom">
+    <div class="footer-bottom" id="contact">
         <div class="footer-bottom-content">
             <div class="copyright">
-                &copy; 2025 testing Architects OPC. All rights reserved. | 
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                &copy; 2025 Volume Architects OPC. All rights reserved. | 
+                <a href="https://www.google.com/">Privacy Policy</a> | <a href="#">Terms of Service</a>
             </div>
             <div class="footer-social">
-                <a href="https://x.com/testingADStudio" aria-label="Follow us on Twitter">
+                <a href="https://x.com/VolumeADStudio" aria-label="Follow us on Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/testingads" aria-label="Connect with us on LinkedIn">
+                <a href="https://www.linkedin.com/in/Volumeads" aria-label="Connect with us on LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://www.facebook.com/testing.adstudio" aria-label="Follow us on Facebook">
+                <a href="https://www.facebook.com/Volume.adstudio" aria-label="Follow us on Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/testing.adstudio" aria-label="Follow us on Instagram">
+                <a href="https://www.instagram.com/Volume.adstudio" aria-label="Follow us on Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
     </div>
-
+    <!-- script -->
     <script src="script.js"></script>
 </body>
 </html>
